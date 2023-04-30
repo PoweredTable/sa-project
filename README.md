@@ -9,6 +9,16 @@ Após clonar o repositório em sua máquina e possuir o [Node.Js](https://nodejs
 npm ci 
 ```
 # Utilização
+Para iniciar o projeto e abrir o E-Commerce, é necessário rodar o arquivo `server.js` localizado no root.
+
+Para iniciar o projeto normalmente, utilize o comando abaixo.
+```bash
+npm start
+```
+Caso queira iniciar em modo desenvolvimento, é possível utilizar o [nodemon](https://www.npmjs.com/package/nodemon) para monitoramento em tempo real da aplicação.
+```bash
+npm run dev
+```
 
 ## Variáveis de ambiente
 Defina as variáveis de ambiente necessárias para iniciar o projeto, você pode as definir em um 
