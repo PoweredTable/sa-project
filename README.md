@@ -28,3 +28,4 @@ Defina as variáveis de ambiente necessárias para iniciar o projeto, você pode
 # Links
 * [Kanban Trello](https://trello.com/b/FfGwB1HH/lew-livros-e-commerce-sa):  Quadros de atividades do projeto.
 * [Protótipo Figma](https://www.figma.com/file/mT4h9dmBV6cnU3IX6Evkmq/projeto--telas-para-o-trabalho?node-id=0-1): Protótipos de tela do E-Commerce.
+* [Documentação](https://docs.google.com/document/d/e/2PACX-1vSm8zO3n2SEKnkDS2OwUypv5bYxKDdyVz51Th3fEwcOIT8dNDSOMrMyCJlAd4Iq-EKwTF37oYeemdd0/pub): Requisitos funcionais e não funcionais do projeto.
