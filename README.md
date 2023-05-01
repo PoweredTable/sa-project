@@ -4,24 +4,27 @@
 
 # Instalação
 
-Após clonar o repositório em sua máquina e possuir o [Node.Js](https://nodejs.org/en), utilize o comando abaixo para baixar as bibliotecas.
+Após clonar o repositório em sua máquina e possuir o [Node.Js](https://nodejs.org/en), acesse a pasta `./server` e/ou `./client` e instale as dependências.
 ```
+cd server
 npm ci 
 ```
 # Utilização
-Para iniciar o projeto e abrir o E-Commerce, é necessário rodar o arquivo `server.js` localizado no root.
+A aplicação completa (backend e frontend) requer que tanto o cliente quanto o servidor sejam iniciados.
+## Backend
+Para iniciar o backend do E-Commerce, é necessário rodar o arquivo `server.js` localizado na pasta `server`.
 
-Para iniciar o projeto normalmente, utilize o comando abaixo.
+Para iniciar o backend normalmente, utilize o comando abaixo.
 ```bash
 npm start
 ```
-Caso queira iniciar em modo desenvolvimento, é possível utilizar o [nodemon](https://www.npmjs.com/package/nodemon) para monitoramento em tempo real da aplicação.
+Caso queira iniciar em modo desenvolvimento, é possível utilizar o [nodemon](https://www.npmjs.com/package/nodemon) para monitoramento em tempo real.
 ```bash
 npm run dev
 ```
 
-## Variáveis de ambiente
-Defina as variáveis de ambiente necessárias para iniciar o projeto, você pode as definir em um 
+### Variáveis de ambiente
+Defina as variáveis de ambiente necessárias para iniciar o backend, você pode as definir em um 
 **arquivo  .env** (você precisará criar o arquivo) ou editar as variáves de ambiente do sistema.
 * `DATABASE_URL`: URL do banco de dados do Postgress
 
