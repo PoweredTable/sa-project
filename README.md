@@ -12,7 +12,7 @@ npm ci
 # Utilização
 A aplicação completa (backend e frontend) requer que tanto o cliente quanto o servidor sejam iniciados.
 ## Backend
-Para iniciar o backend do E-Commerce, é necessário rodar o arquivo `server.js` localizado na pasta `server`.
+Para iniciar o backend do E-Commerce, é necessário rodar os scripts abaixo.
 
 Para iniciar o backend normalmente, utilize o comando abaixo.
 ```bash
@@ -27,6 +27,13 @@ npm run dev
 Defina as variáveis de ambiente necessárias para iniciar o backend, você pode as definir em um 
 **arquivo  .env** (você precisará criar o arquivo) ou editar as variáves de ambiente do sistema.
 * `DATABASE_URL`: URL do banco de dados do Postgress
+
+## Frontend
+Para iniciar o frontend do E-Commerce, é necessário rodar o script abaixo.
+
+```bash
+npm start
+```
 
 # Links
 * [Kanban Trello](https://trello.com/b/FfGwB1HH/lew-livros-e-commerce-sa):  Quadros de atividades do projeto.
