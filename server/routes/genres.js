@@ -4,6 +4,6 @@ const router = express.Router();
 // select * from GENEROS
 // usages:
 // - listar os gêneros na subnavbar (modal) e na sidebar.
-router.get('api/v1/genres')
+router.get('/all')
 
 module.exports = router
