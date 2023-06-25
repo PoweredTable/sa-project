@@ -1,0 +1,43 @@
+CREATE TABLE AUTORES (
+    Cod_autor SERIAL NOT NULL PRIMARY KEY,
+    Nome VARCHAR,
+    Pais VARCHAR,
+    url_autor varchar, 
+    bibliografia varchar not null
+);
+
+CREATE TABLE MANGAS (
+    Cod_manga SERIAL NOT NULL PRIMARY KEY,
+    Nome VARCHAR,
+    Sinopse VARCHAR,
+    Preco_unit DECIMAL NOT NULL,
+    Quantidade NUMERIC NOT NULL,
+    Paginas NUMERIC NOT NULL,
+    Url_capa VARCHAR NOT NULL,
+    banner SERIAL NOT NULL,
+    Genero SERIAL NOT NULL,
+    Autor SERIAL NOT NULL
+);
+
+CREATE TABLE GENEROS (
+    Cod_Genero SERIAL NOT NULL PRIMARY KEY,
+    Nome VARCHAR
+);
+
+Create table banners( 
+cod_banner Serial Not null primary key,
+URL_Banner varchar not null
+);
+
+
+ ALTER TABLE MANGAS ADD CONSTRAINT FK_MANGAS_banners
+    FOREIGN KEY (banner)
+    REFERENCES banners (cod_banner);
+ 
+ALTER TABLE MANGAS ADD CONSTRAINT FK_MANGAS_AUTOR
+    FOREIGN KEY (Autor)
+    REFERENCES AUTORES (cod_autor);
+ 
+ ALTER TABLE MANGAS ADD CONSTRAINT FK_MANGAS_GENERO
+FOREIGN KEY (Genero)
+ REFERENCES GENEROS (cod_genero);
