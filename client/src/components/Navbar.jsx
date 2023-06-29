@@ -5,7 +5,8 @@ import Typography from '@mui/material/Typography';
 
 import Searchbar from './Searchbar'
 import './Navbar.css'
-
+import Login from './login'
+import Logo from './logo'
 
 function Navbar() {
 
@@ -28,8 +29,9 @@ function Navbar() {
     <div>
       <nav className='nav'>
         <div className='align navBarUP'>
-          <Link to='' className='site-title'>LEW BOOKS</Link>
+          <Link to='' className='site-title' ><Logo></Logo></Link>
           <Searchbar></Searchbar>
+          <Login></Login>
         </div>
 
         <div className='navBarDown'>
