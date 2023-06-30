@@ -1,29 +1,31 @@
 .nav {
-    background-color: #2c2828;
-    position: fixed;
+    background-color: #141313;
+    /* position: fixed; */
     z-index: 10;
     width: 100vw;
     top: 0;
+    
 } 
 
-.site-title{
-    font-size: 40px;
-    text-decoration: none;
-    color: rgb(255, 0, 0);
-    
-}
+
 
 .align{
     display: flex;
     flex-direction: row;
     color: orange;
-    
+    align-items: center;
+    justify-content:space-between;
+    box-sizing: border-box;
+    gap: 2rem;
+    padding: 0 1rem;
 }
 
 .navBarUP{
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left:10px;
+   margin-left: -20px;
+    justify-content: space-evenly;
+
 }
 .navBarDown{
     font-size: 18px;
