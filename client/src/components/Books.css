@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Nobile;
+    src: url("./assets/Nobile-Regular.ttf");
+}
+
+body {
+    background-image: url(./assets/backgound-screen5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.structure {
+    display: flex;
+    flex-direction: row;
+}
+
+.sideBar {
+    padding-left: 10px;
+    border: 3px solid #4E4E4E;
+    border-radius: 19px;
+    margin: 10px;
+}
+
+#title {
+    font-family: Nobile;
+    font-size: 25px;
+    color: #C2C2C2;
+}
+
+#subTitle {
+    font-family: Nobile;
+    padding-left: 10px;
+    font-size: 20px;
+    color: #C2C2C2;
+}
+
+.list {
+    font-family: Nobile;
+    padding-bottom: 1px;
+    padding-right: 13px;
+    color: #C2C2C2;
+    list-style: none;
+    font-size: 18px;
+}
+.list:hover{
+    color: #4E4E4E;
+    transform: scale(1.1);
+}
+
+.mangasArea {
+    border: 3px solid #4E4E4E;
+    border-radius: 19px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mangasArea ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mangasArea h2 {
+    font-family: Nobile;
+    color: #4E4E4E;
+    font-size: 18px
+}
