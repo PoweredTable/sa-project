@@ -1,8 +1,34 @@
-import React from 'react'
+import  { useState, useEffect} from 'react';
 
-const Authors = () => {
+import api from '../services/api';
+
+
+function Authors() {
+  const [authors,setAuthors] =useState([]);
+  
+
+  useEffect(() => {
+    api.get('/api/v1/authors/all').then((response) => {
+      setAuthors(response.data.result);
+    })
+    .catch((error) => {
+      console.log(error)
+    });
+  }, []);
+
+
+
+
   return (
-    <h1>tela de autores</h1>
+    <section className='Container'>
+      <div>
+      {authors.map((author, index) => (
+          <div className="card" key={index}>
+            <img className='autor' src={author.url_autor} key={index}/>
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }
 
