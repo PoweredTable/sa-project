@@ -1,0 +1,32 @@
+@font-face{
+    font-family: Nobile;
+    src: url("./assets/Nobile-Regular.ttf");
+}
+
+.container{
+    display: flex;
+    flex-direction:column;
+    justify-content: left; 
+}
+
+.image{
+    
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px 3px rgb(80, 79, 79); 
+}
+
+
+.descricao{
+    padding-top: 5px;
+    padding-left: 5px;
+    color: #C2C2C2;
+    font-size: 20px;
+    font-family: Nobile;
+}
+.descricao p{
+    margin: 0;
+    padding-bottom: 2px;
+}
+.hover:hover{
+    transform: scale(1.02);
+}
