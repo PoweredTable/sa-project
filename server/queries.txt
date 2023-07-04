@@ -43,5 +43,3 @@ FOREIGN KEY (Genero)
  REFERENCES GENEROS (cod_genero);
 
 
- INSERT INTO  mangas (nome, sinopse, preco_unit, quantidade, paginas, url_capa, banner, genero, autor) 
-    VALUES ('Ataque dos Titãs Vol. 1','A Divisão de Reconhecimento se divide para conter a ameaça dos titãs anômalos que pretendem capturar Eren! Do outro lado da batalha, o Titã Blindado toma a frente do ataque e mostra que não será fácil derrotá-lo!', '58.00', 5, 188, 'https://m.media-amazon.com/images/I/51gaCkrbPXL._AC_UF1000,1000_QL80_.jpg', 5, 1,6) 
