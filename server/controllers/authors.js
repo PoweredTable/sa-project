@@ -16,7 +16,6 @@ exports.getAuthorById = (req, res) => {
 
 exports.getAllAuthors = (req, res) => {
     const query = "SELECT * FROM AUTORES"
-    
     database.query(query).then(
         (result)=>{
             res.status(200).send({result: result.rows})

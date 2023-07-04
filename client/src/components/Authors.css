@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Nobile;
+    src: url("./assets/Nobile-Regular.ttf");
+}
+
+body {
+    background-image: url(./assets/backgound-screen5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-family: Nobile;
+}
+
+.container {
+    border: 3px solid #4E4E4E;
+    border-radius: 19px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.container h2 {
+    font-family: Nobile;
+    color: #4E4E4E;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container-autor {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    border-radius: 2px;
+    margin-top: 50px;
+}
+
+.container-card img {
+    height: 275px;
+    width: 180px;
+
+}
+
+.descricao p {
+    padding-top: 5px;
+    padding-left: 5px;
+    color: #C2C2C2;
+    font-size: 15px;
+    font-family: Nobile;
+}
+
+.modal {
+    position: absolute;
+    border: 3px #C35E00 solid;
+    background-color: #312F2F;
+    border-radius: 20px;
+    height: 450px;
+    width: 450px;
+    margin: 0 auto;
+    position: absolute;
+    top: 18%;
+    left: 30%
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(160, 102, 35, 0.8);
+}
+
+.titleModal{
+    border: 2px solid #4E4E4E;
+    border-radius: 12px;
+    margin: 2%;
+}
+
+.titleModal h2 {
+    font-size: 20px;
+    text-align: center;
+    /* margin-top: 4px; */
+    margin: 8px;
+    color:#eee8e8
+}
+
+.titleModal h2 span {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    color:#eee8e8
+}
+
+.bodyModal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin:25px 2% 0 2%;
+    /* margin-top: 25px;
+    margin-left: 2%;
+    margin-right: 2%; */
+}
+
+.iconAuthor{
+     height: 250px;
+    width: 180px;
+    border: 2px solid #C35E00;
+    margin-top: 8%;
+}
+
+.bibliografia{
+    border: 2px solid #4E4E4E;
+    border-radius: 12px;
+    color:#eee8e8;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+
+
+
