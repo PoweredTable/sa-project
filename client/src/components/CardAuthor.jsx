@@ -22,3 +22,4 @@ function cardAuthor({ url_autor, nome }) {
 }
 
 export default cardAuthor
+
