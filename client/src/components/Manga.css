@@ -27,6 +27,9 @@
     margin: 0;
     padding-bottom: 2px;
 }
+.hover a{
+    text-decoration: none;
+}
 .hover:hover{
     transform: scale(1.02);
 }

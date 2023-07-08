@@ -1,13 +1,11 @@
 .nav {
     background-color: #141313;
-    /* position: fixed; */
+    position: fixed;
     z-index: 10;
     width: 100vw;
     top: 0;
     
 } 
-
-
 
 .align{
     display: flex;

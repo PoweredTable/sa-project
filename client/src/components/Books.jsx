@@ -1,51 +1,67 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Routes, Route, Link } from "react-router-dom"
 import './Books.css'
 import Manga from './Manga'
+import api from '../services/api';
+import ViewBook from './ViewBook'
 
-
+import { MangaData } from './MangaData'
 
 function Books() {
-  const [generos, setGeneros] = useState(['Ação', 'Adulto', 'Artes Marciais', 'Aventura', 'Bizarro', 'Comédia', 'Comida', 'Culinária', 'Demônios', 'Distopia', 'Doujinshi', 'Drama', 'Ecchi', 'Esporte', 'Fantasia', 'Física', 'Guerra', 'Harém', 'Histórico', 'Homenagem', 'Horror', 'Isekai', 'Jogos', 'Josei', 'Magia', 'Mecha', 'Médico', 'Medieval', 'Mistério', 'Mitologia', 'Ninja', 'Non-sense', 'Novel', 'Obra Nacional', 'One Shot', 'Psicológico', 'Reencarnação', 'Regressão', 'Romance', 'Sci-fi', 'Seinen', 'Shoujo', 'Shounen', 'Slice of Life', 'Sobrenatural', 'Sobrevivência', 'Suspense', 'Tokusatsu', 'Torre', 'Tragédia', 'Vampiro', 'Vida Escolar', 'Wuxia', 'Yaoi', 'Yuri'])
-  const [mangas, setManga] = useState([])
-    const manga1 = {
-        capa: "https://www.otakupt.com/wp-content/uploads/2017/08/m1.jpg",
-        nome: "Mushoku tensei",
-        preco: "R$150"
-    }
-    const manga2 = {
-        capa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0rBekuZQsuDISmPyTD_DReMitM5_9ukkMtg&usqp=CAU",
-        nome: "Bleach",
-        preco: "R$150"
-    }
-    const manga3 = {
-        capa: "https://1.bp.blogspot.com/-26ZwQE6Qt0I/YHpRDJSpHYI/AAAAAAAAhuY/Tzax63E-nngw88QB9lj5M08N9MRwhPVTgCLcBGAsYHQ/s2048/QFDQ.png",
-        nome: "Kaiju nº8",
-        preco: "R$150"
-    }
+  const [generos, setGeneros] = useState([])
+  const [mangas, setMangas] = useState([])
 
-    for (let i = 0; i < 4; i++) {
-        mangas.push(manga1)
-        mangas.push(manga2)
-        mangas.push(manga3)
-    }
-    let quantity = mangas.length
+  useEffect(() => {
+    api.get('/api/v1/books/all').then((response) => {
+      setMangas(response.data.result);
+    })
+    .catch((error) => {
+      console.log(error)
+    });
+
+    api.get('/api/v1/genres/all').then((response)=>{
+      setGeneros(response.data.result)
+      console.log(generos)
+    })
+    .catch((error)=>{
+      console.log(error)
+    });
+
+  }, []);
+
+  let quantity = mangas.length
   return (
+
     <div className='structure'>
+      {/* <Routes>
+        <Route path='/:id' element={<ViewBook />}> </Route>
+      </Routes> */}
       <div className='sideBar'>
         <h2 id='title'>Livros</h2>
         <h2 id='subTitle'>Gêneros</h2>
         <ul>
-          {generos.map(genero =>{
-            return (<li className='list'>{genero}</li>)
+          {generos.map(genero => {
+            return (<li className='list'>{genero.nome}</li>)
           })}
         </ul>
       </div>
       <div className='mangasArea'>
         <h2>Produtos encontrado:<span>{quantity}</span></h2>
         <ul>
-        {mangas.map(manga =>{
-          return (<li><Manga capa={manga.capa} nome={manga.nome} preco={manga.preco} /></li>)
-        })}
+          {mangas.map(manga => {
+            return (
+              <Link to={`/books/${manga.cod_manga}`}>
+                <li>
+                  <Manga
+                    id={manga.cod_manga}
+                    capa={manga.url_capa}
+                    nome={manga.nome}
+                    preco={manga.preco_unit}
+                  />
+                </li>
+              </Link>
+            )
+          })}
         </ul>
       </div>
     </div>

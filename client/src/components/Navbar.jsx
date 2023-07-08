@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from "react-router-dom"
+import { Link, Routes } from "react-router-dom"
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import GenerosTable from './GenerosTable';
@@ -27,6 +27,7 @@ function Navbar() {
   const id = open ? 'simple-popover' : undefined;
 
   return (
+
     <div>
       <nav className='nav'>
         <div className='align navBarUP'>
