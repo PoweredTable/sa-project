@@ -13,7 +13,7 @@ exports.getAllGenres = (req, res) => {
     )
 };
 
-exports.getGenresbyId = (req, res) => {
+exports.getGenrebyId = (req, res) => {
     const query = "select * from generos where cod_genero = $1";
     const values = [req.params.cod_genero];
 
