@@ -10,7 +10,7 @@ import { MangaData } from './MangaData'
 function Books() {
   const [generos, setGeneros] = useState([])
   const [mangas, setMangas] = useState([])
-
+  let quantity = mangas.length 
   useEffect(() => {
     api.get('/api/v1/books/all').then((response) => {
       setMangas(response.data.result);
@@ -29,7 +29,6 @@ function Books() {
 
   }, []);
 
-  let quantity = mangas.length
   return (
 
     <div className='structure'>
@@ -43,7 +42,7 @@ function Books() {
         </ul>
       </div>
       <div className='mangasArea'>
-        <h2>Produtos encontrado:<span>{quantity}</span></h2>
+        <h2>Produtos encontrado:<span> {quantity}</span></h2>
         <ul>
           {mangas.map(manga => {
             return (
