@@ -5,8 +5,6 @@ import Manga from './Manga'
 import api from '../services/api';
 import ViewBook from './ViewBook'
 
-import { MangaData } from './MangaData'
-
 function Books() {
   const [generos, setGeneros] = useState([])
   const [mangas, setMangas] = useState([])
