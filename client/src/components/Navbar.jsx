@@ -27,6 +27,7 @@ function Navbar() {
   const id = open ? 'simple-popover' : undefined;
 
   return (
+
     <div>
       <nav className='nav'>
         <div className='align navBarUP'>

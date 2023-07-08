@@ -42,7 +42,7 @@ button {
 .search-left select {
   background-color: #bbb9b7;
   float: left;
- border-radius: 8px;
+ border-radius: 8px; 
  outline-style:none;
  border: #C35E00;
  text-align: center;

@@ -11,9 +11,33 @@ body {
     overflow-x: hidden;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+    border-radius: 10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #636363; 
+    border-radius: 10px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
 .structure {
     display: flex;
     flex-direction: row;
+
+    padding-top: 90px;
+    box-sizing: border-box;
+
 }
 
 .sideBar {
@@ -65,10 +89,20 @@ body {
     padding: 0;
     flex-wrap: wrap;
     justify-content: center;
+
+    text-decoration: none;
+
 }
 
 .mangasArea h2 {
     font-family: Nobile;
     color: #4E4E4E;
     font-size: 18px
+
+}
+.mangasArea li{
+    text-decoration: none;
+}
+.mangasArea a{
+    text-decoration: none;
 }
