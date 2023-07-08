@@ -7,7 +7,7 @@ import CardAuthor from './CardAuthor.jsx'
 
 function Authors() {
   const [authors, setAuthors] = useState([]);
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(0);
   const [indiceSelecionado, setIndiceSelecionado] = useState(0);
   const [modalIsOpen, setIsOpen] = useState(false);
 

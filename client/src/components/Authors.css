@@ -3,14 +3,8 @@
     src: url("./assets/Nobile-Regular.ttf");
 }
 
-body {
-    background-image: url(./assets/backgound-screen5.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow-x: hidden;
-    font-family: Nobile;
-}
+
+    
 
 .container {
     border: 3px solid #4E4E4E;
@@ -18,7 +12,16 @@ body {
     margin: 10px;
     display: flex;
     align-items: center;
+    background-image: url(./assets/backgound-screen5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-family: Nobile;
+    height: 100vmin;
+    
 }
+
 
 
 
