@@ -10,6 +10,7 @@ body {
     background-attachment: fixed;
     overflow-x: hidden;
 }
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -29,11 +30,14 @@ body {
     background: #555; 
   }
 
+
 .structure {
     display: flex;
     flex-direction: row;
+
     padding-top: 90px;
     box-sizing: border-box;
+
 }
 
 .sideBar {
@@ -85,13 +89,16 @@ body {
     padding: 0;
     flex-wrap: wrap;
     justify-content: center;
+
     text-decoration: none;
+
 }
 
 .mangasArea h2 {
     font-family: Nobile;
     color: #4E4E4E;
     font-size: 18px
+
 }
 .mangasArea li{
     text-decoration: none;

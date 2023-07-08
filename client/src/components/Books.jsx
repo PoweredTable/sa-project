@@ -33,9 +33,6 @@ function Books() {
   return (
 
     <div className='structure'>
-      {/* <Routes>
-        <Route path='/:id' element={<ViewBook />}> </Route>
-      </Routes> */}
       <div className='sideBar'>
         <h2 id='title'>Livros</h2>
         <h2 id='subTitle'>Gêneros</h2>
