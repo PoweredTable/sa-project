@@ -55,6 +55,8 @@ router.get('/banners/:cod_banner', controller.getBookByBannerId);
 // - cadastra um novo livro.
 router.post('/create', controller.createBook);
 
+router.put('/update/:cod_manga/:column', controller.updateBookColumnById)
+
 // Update Mangas Set nome=${nome}, sinopse=${sinopse}, preco_unit={preco_unit}, quantidade=${}, paginas, url_capa, url_banner,genero,autor
 //Where cod_manga = ${:cod_manga}
 // usages:
