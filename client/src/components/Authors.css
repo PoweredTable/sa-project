@@ -1,29 +1,21 @@
-
 @font-face {
     font-family: Nobile;
     src: url("./assets/Nobile-Regular.ttf");
 }
 
-body {
-    background-image: url(./assets/backgound-screen5.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow-x: hidden;
-    font-family: Nobile;
-}
 
-.container {
+.container-authors {
     border: 3px solid #4E4E4E;
     border-radius: 19px;
     margin: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 
 
-.container h2 {
+.container-authors h2 {
     font-family: Nobile;
     color: #4E4E4E;
     font-size: 18px;
@@ -38,6 +30,7 @@ body {
     grid-gap: 50px;
     border-radius: 2px;
     margin-top: 50px;
+    justify-content: space-between;
 }
 
 .container-card img {

@@ -8,7 +8,7 @@ import CardAuthor from './CardAuthor.jsx'
 
 function Authors() {
   const [authors, setAuthors] = useState([]);
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(0);
   const [indiceSelecionado, setIndiceSelecionado] = useState(0);
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -36,8 +36,9 @@ function Authors() {
   return (
 
 
-    <div>
-      <h2>Autores encontrados: <span>{authors.length}</span></h2>
+    <div className='container-authors'> 
+      
+      
       <div className='container-autor'>
         {authors.map((autor, index) => (
           <div key={index} onClick={() => abrirModal(index)}><CardAuthor key={index}{...autor} /></div>
