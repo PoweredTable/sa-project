@@ -10,10 +10,21 @@ import './Navbar.css'
 import Login from './login'
 import Logo from './logo'
 
-function Navbar() {
+import { BooksContext } from './contexts/BooksContext';
+import { useContext } from 'react';
+import { AlertTitle } from '@mui/material';
 
-  const [generos, setGeneros] = useState(['Ação', 'Adulto', 'Artes Marciais', 'Aventura', 'Bizarro', 'Comédia', 'Comida', 'Culinária', 'Demônios', 'Distopia', 'Doujinshi', 'Drama', 'Ecchi', 'Esporte', 'Fantasia', 'Física', 'Guerra', 'Harém', 'Histórico', 'Homenagem', 'Horror', 'Isekai', 'Jogos', 'Josei', 'Kamen Rider', 'Magia', 'Mecha', 'Médico', 'Medieval', 'Memorial', 'Mistério', 'Mitologia', 'Ninja', 'Non-sense', 'Novel', 'Obra Nacional', 'One Shot', 'Psicológico', 'Reencarnação', 'Regressão', 'Romance', 'Saint Seiya', 'Sci-fi', 'Seinen', 'Shoujo', 'Shoujo Ai', 'Shounen', 'Shounen BL', 'Slice of Life', 'Sobrenatural', 'Sobrevivência', 'Suspense', 'Tokusatsu', 'Torre', 'Tragédia', 'Ultraman', 'Vampiro', 'Viagem no tempo', 'Vida Escolar', 'Wuxia', 'Yaoi', 'Yuri'])
-  const [anchorEl, setAnchorEl] = React.useState(null);
+import api from '../services/api';
+
+function Navbar() {
+  const { setBooks } = useContext(BooksContext);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const setAllBooks = () => {
+    api.get('/api/v1/books/all').then((response)=>{
+      setBooks(response.data.result)
+    })   
+  }
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -61,26 +72,15 @@ function Navbar() {
               }}
             >
               <Typography sx={{ p: 2 }} className='popoverInSide'
-
                 aria-haspopup="true"
               >
-                {/* <table>
-                  {generos.map(genero => {
-                    return (<tr>
-                      <td className='tdEspaco'>{genero}</td>
-                      <td className='tdEspaco'>{genero}</td>
-                      <td className='tdEspaco'>{genero}</td>
-                    </tr>)
-                  })
-                  }
-                </table> */}
                 <GenerosTable />
               </Typography>
             </Popover>
           </section>
 
 
-          <section >
+          <section onClick={setAllBooks} >
             <Link to='/books'>Livros</Link>
           </section>
 
@@ -90,17 +90,3 @@ function Navbar() {
   )
 }
 export default Navbar
-
-{/* <div className='elementsPopover' ref={popoverRef}>
-                <table>
-                  {generos.map(genero =>{
-                    return(<tr>
-                      <td className='tdEspaco'>{genero}</td>
-                      
-                    </tr>)
-                  })
-
-                  }
-                    
-                </table>
-                </div> */}

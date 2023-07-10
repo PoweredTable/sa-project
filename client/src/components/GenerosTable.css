@@ -1,6 +1,9 @@
 
 .textTable{
     margin: 0;
-    font-size: 12px
+    font-size: 12px;
+    color: #BEB8B8;
 }
-
+#itenList{
+    text-decoration: none;
+}
