@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import { Routes, Route, Link } from "react-router-dom"
 
-import './all.css'
+import './credito.css'
 
 function credito() {
 

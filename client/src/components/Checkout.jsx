@@ -7,26 +7,27 @@ import './Checkout.css'
 
 
 function Checkout() {
-
+    const [compra, setCompra] = useState([])
 
 
     return (
         <div  >
             <section className='grid-center'>
                 <article className='detalhesItem'>
-                    <div className='icon'>
-                        <img src='/src/components/assets/prancheta.png' alt="iiiiiiiiiiiii" />
+                    <div className='headerIcon'>
+                        <div className='icon'>
+                            <img src='/src/components/assets/prancheta.png' alt="" />
+                        </div>
                     </div>
-
-                    <h2>Informações do pedido</h2>
+                    <h3>Informações do pedido</h3>
                     <p><strong>Manga:</strong>  One Pice</p>
                     <p><strong>Preço Unitario R$</strong> 23,00 </p>
                     <p> <strong>Quantidade</strong> 8</p>
                     <p> <strong>Preço Total R$ </strong> 750,00</p>
                 </article>
                 <article className='endereco'>
-                <div className='icon'>
-                        <img src='/src/components/assets/botao-de-inicio.png' alt="iiiiiiiiiiiii" />
+                    <div className='icon'>
+                        <img src='/src/components/assets/botao-de-inicio.png' alt="" />
                     </div>
 
                     <input type="text" placeholder='CEP' />
@@ -39,26 +40,17 @@ function Checkout() {
                         <img src='/src/components/assets/cartao-de-credito.png' alt="" />
                     </div>
 
-                    <h2>Selecione a forma de pagamento</h2>
+                    <h3>Selecione a forma de pagamento</h3>
 
                     <Link to={'/checkout/payment-method/pix'}><button>PIX</button></Link>
-
                     <Link to={'/checkout/payment-method/boleto'}><button>Boleto</button></Link>
                     <Link to={'/checkout/payment-method/credito'}><button>Credito</button></Link>
 
                 </article>
 
             </section>
-
-
         </div>
-
-
-
     )
 }
-
-
-
 
 export default Checkout

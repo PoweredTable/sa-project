@@ -30,19 +30,28 @@ body {
     margin: 10px;
 }
 
-
+.headerIcon{
+display: flex;
+align-items: center;
+}
 .icon{
-    background: grey;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    background: #323030;
+    align-self: center;
+    padding:5%;
+    
 }
 .icon img{
 
    
     width: 30px;
     height: 30px;
-    background: grey;
-    align-self: center;
+    background: #323030;
+    /* align-self: center;
     align-items: center;
-    align-content: center;
+    align-content: center; */
 
 }
 
@@ -50,7 +59,8 @@ body {
     width: 40%;
     margin-left: 5%; 
     align-items: center;
-    text-align: center;
+    text-align: center;height: 270px
+    
 }
 
 .detalhesItem p{

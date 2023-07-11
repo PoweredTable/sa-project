@@ -43,39 +43,21 @@
 }
 
 
+.icon {
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    background: #323030;
+    align-self: center;
+    padding:5%;
+    border:0 5%
+}
 
 
 
 .method {
     width: 290px;
     height: 290px;
-}
-
-
-
-
-.credito {
-border: solid 2px #C35E00 ;
-padding:2%;
-border-radius:8px ;
-height: auto;
-width: 400px;
-align-items: center;text-align: center;
-color: #fff;
-}
-
-.credito h3{
-    margin: 2%;
-}
-
-.credito input{
-    border: solid 2px white;
-    margin: 2%;
-    padding: 2%;
-    background: none;
-    border-radius: 8px;
-    height: 80%;
-    width: 70%;
 }
 
 .boleto{
@@ -86,9 +68,4 @@ color: #fff;
     text-align: center;
     border-radius: 8px;
 
-}
-.pega{
-    width: 380px;
-    height: 280px;
-   margin-top: 1%;
 }
