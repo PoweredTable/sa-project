@@ -9,15 +9,15 @@ import Searchbar from './Searchbar'
 import './Navbar.css'
 import Login from './login'
 import Logo from './logo'
-
 import { BooksContext } from './contexts/BooksContext';
 import { useContext } from 'react';
 import { AlertTitle } from '@mui/material';
 
 import api from '../services/api';
 
-function Navbar() {
-  const { setBooks } = useContext(BooksContext);
+
+export function NavbarDefault() {
+const { setBooks } = useContext(BooksContext);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const setAllBooks = () => {
@@ -89,4 +89,21 @@ function Navbar() {
     </div>
   )
 }
-export default Navbar
+
+
+export function NavbarCheckout() {
+  return (
+    <div >
+      <nav className='nav'>
+        <div className='checkout'>
+          <div className='align navBarUP'>
+            <Link to={''} className='site-title' ><Logo></Logo></Link>
+            <h1 className=''>FINALIZAR COMPRA</h1>
+          </div>
+        </div>
+      </nav>
+    </div>
+  )
+}
+
+

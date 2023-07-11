@@ -64,3 +64,10 @@
 section p {
     margin: 0;
   }
+
+
+
+  .checkout h1{
+    color: antiquewhite;
+    width: 70%;
+  }

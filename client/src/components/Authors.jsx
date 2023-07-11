@@ -36,8 +36,9 @@ function Authors() {
   return (
 
 
-    <div>
+    <div className='container-authors'> 
       <h2>Autores encontrados: <span>{authors.length}</span></h2>
+      <br />
       <div className='container-autor'>
         {authors.map((autor, index) => (
           <div key={index} onClick={() => abrirModal(index)}><CardAuthor key={index}{...autor} /></div>
