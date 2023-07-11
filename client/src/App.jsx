@@ -6,29 +6,26 @@ import './App.css'
 
 import {
   Home, Books, Authors, NavbarDefault,
-  NavbarCheckout, ViewBook, Checkout
+  NavbarCheckout, ViewBook, Checkout, PayBoleto,
+  PayCredito, PayPIX
 } from './components'
 
 function App() {
   const location = useLocation();
 
-  // Array of routes where NavbarA should be shown
-  const navBarA = ['/books', '/authors', '/home'];
-
-  // Array of routes where NavbarB should be shown
-  const navbarB = ['/checkout'];
 
   const showNavbarA = ['/books', '/authors', '/home'].some(path => location.pathname.startsWith(path));
 
-  const showNavbarB = navbarB.includes(location.pathname);
+  const showNavbarB = ['/checkout'].some(path=> location.pathname.startsWith(path));
 
-  const hideNavbar = window.location.pathname.startsWith('/admin')
+  const hideNavbar = ['/admin','/checkout'].some(path => location.pathname.startsWith(path));
+ 
   const showAlternateNavbar = false
   return (
     <>
-      {showNavbarA && <NavbarDefault />}
-      {showNavbarB && <NavbarCheckout />}
-      {!hideNavbar && !showAlternateNavbar && <NavbarDefault />}
+      {showNavbarA && <NavbarDefault/>}
+      {showNavbarB && <NavbarCheckout/>}
+      {!hideNavbar && !showAlternateNavbar && <NavbarDefault/>}
 
 
       <div className='container'>
@@ -38,6 +35,9 @@ function App() {
           <Route path='/books' element={<Books />} />
           <Route path='/authors' element={<Authors />} />
           <Route path='/checkout' element={<Checkout />} />
+          <Route path='/checkout/payment-method/boleto' element={<PayBoleto />} />
+          <Route path='/checkout/payment-method/credito' element={<PayCredito />} />
+          <Route path='/checkout/payment-method/pix' element={<PayPIX />} />
         </Routes>
       </div>
     </>

@@ -10,7 +10,7 @@ import './Navbar.css'
 import Login from './login'
 import Logo from './logo'
 
- export function NavbarDefault() {
+export function NavbarDefault() {
 
   const [generos, setGeneros] = useState(['Ação', 'Adulto', 'Artes Marciais', 'Aventura', 'Bizarro', 'Comédia', 'Comida', 'Culinária', 'Demônios', 'Distopia', 'Doujinshi', 'Drama', 'Ecchi', 'Esporte', 'Fantasia', 'Física', 'Guerra', 'Harém', 'Histórico', 'Homenagem', 'Horror', 'Isekai', 'Jogos', 'Josei', 'Kamen Rider', 'Magia', 'Mecha', 'Médico', 'Medieval', 'Memorial', 'Mistério', 'Mitologia', 'Ninja', 'Non-sense', 'Novel', 'Obra Nacional', 'One Shot', 'Psicológico', 'Reencarnação', 'Regressão', 'Romance', 'Saint Seiya', 'Sci-fi', 'Seinen', 'Shoujo', 'Shoujo Ai', 'Shounen', 'Shounen BL', 'Slice of Life', 'Sobrenatural', 'Sobrevivência', 'Suspense', 'Tokusatsu', 'Torre', 'Tragédia', 'Ultraman', 'Vampiro', 'Viagem no tempo', 'Vida Escolar', 'Wuxia', 'Yaoi', 'Yuri'])
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -92,16 +92,18 @@ import Logo from './logo'
 
 
 
- export function NavbarCheckout() {
+export function NavbarCheckout() {
   return (
-    <div>
+    <div >
       <nav className='nav'>
-        <div className='align navBarUP'>
-          <Link to={''} className='site-title' ><Logo></Logo></Link>
-          <h1>FINALIZAR COMPRAR</h1>
+        <div className='checkout'>
+          <div className='align navBarUP'>
+            <Link to={''} className='site-title' ><Logo></Logo></Link>
+            <h1 className=''>FINALIZAR COMPRA</h1>
+          </div>
         </div>
       </nav>
     </div>
-    )
+  )
 }
 

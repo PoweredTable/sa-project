@@ -7,15 +7,54 @@ import './Checkout.css'
 
 
 function Checkout() {
+
+
+
     return (
         <div  >
-    
-    
-    
+            <section className='grid-center'>
+                <article className='detalhesItem'>
+                    <div className='icon'>
+                        <img src='/src/components/assets/prancheta.png' alt="iiiiiiiiiiiii" />
+                    </div>
+
+                    <h2>Informações do pedido</h2>
+                    <p><strong>Manga:</strong>  One Pice</p>
+                    <p><strong>Preço Unitario R$</strong> 23,00 </p>
+                    <p> <strong>Quantidade</strong> 8</p>
+                    <p> <strong>Preço Total R$ </strong> 750,00</p>
+                </article>
+                <article className='endereco'>
+                <div className='icon'>
+                        <img src='/src/components/assets/botao-de-inicio.png' alt="iiiiiiiiiiiii" />
+                    </div>
+
+                    <input type="text" placeholder='CEP' />
+                    <input type="text" placeholder='Numero' />
+                    <input type="text" placeholder='Complemento' />
+                    <input type="text" placeholder='Destinatario' />
+                </article>
+                <article className='formaPagamento'>
+                    <div className='icon'>
+                        <img src='/src/components/assets/cartao-de-credito.png' alt="" />
+                    </div>
+
+                    <h2>Selecione a forma de pagamento</h2>
+
+                    <Link to={'/checkout/payment-method/pix'}><button>PIX</button></Link>
+
+                    <Link to={'/checkout/payment-method/boleto'}><button>Boleto</button></Link>
+                    <Link to={'/checkout/payment-method/credito'}><button>Credito</button></Link>
+
+                </article>
+
+            </section>
+
+
         </div>
-    
-    
-    
+
+
+
     )
 }
 

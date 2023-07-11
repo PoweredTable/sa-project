@@ -4,6 +4,9 @@ import Books from './Books'
 import Authors from './Authors'
 import ViewBook from './ViewBook'
 import Checkout from './Checkout'
+import PayBoleto from './PaymentMethods/boleto'
+import PayCredito from './PaymentMethods/credito'
+import PayPIX from './PaymentMethods/pix'
 
 export {
     Home,
@@ -12,5 +15,8 @@ export {
     Books,
     Authors,
     ViewBook, 
-    Checkout 
+    Checkout,
+    PayBoleto,
+    PayCredito,
+    PayPIX
 }

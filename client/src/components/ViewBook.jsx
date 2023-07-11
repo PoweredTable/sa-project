@@ -12,12 +12,15 @@ function ViewBook() {
   const { id } = useParams();
   const [banners, setBanners] = useState([])
   const [number, setNumber] = useState(0)
+  const [total, setTotal] = useState(0)
 
   const banner = banners.find((banner) => banner.cod_banner === manga?.banner)
 
   const plusNumber = () => {
     if (number < manga.quantidade) {
       setNumber(number + 1)
+      totalVariable = manga?.preco_unit * number
+      setTotal(totalVariable)
     }
 
   }
@@ -25,6 +28,8 @@ function ViewBook() {
   const minusNumber = () => {
     if (number > 0) {
       setNumber(number - 1)
+      totalVariable = manga.preco_unit * number
+      setTotal(totalVariable)
     }
   }
 
@@ -60,6 +65,7 @@ function ViewBook() {
     };
 
     fetchData();
+
   }, [id]);
 
 
@@ -79,7 +85,7 @@ function ViewBook() {
             <p>{author?.nome}</p>
             <hr />
             <p>Preço: {manga.preco_unit}</p>
-            <p>Total: R$<span>minha pika</span></p>
+            <p>Total: R$<span>{total}</span></p>
             <div className='buttonsArea'>
               <div className='quantityArea'>
                 <button onClick={minusNumber}><strong>-</strong></button>
