@@ -3,11 +3,10 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 
 
 import './App.css'
-
 import {
   Home, Books, Authors, NavbarDefault,
   NavbarCheckout, ViewBook, Checkout, PayBoleto,
-  PayCredito, PayPIX
+  PayCredito, PayPIX, BooksContextProvider
 } from './components'
 
 function App() {
@@ -23,6 +22,7 @@ function App() {
   const showAlternateNavbar = false
   return (
     <>
+     <BooksContextProvider>
       {showNavbarA && <NavbarDefault/>}
       {showNavbarB && <NavbarCheckout/>}
       {!hideNavbar && !showAlternateNavbar && <NavbarDefault/>}
@@ -40,6 +40,8 @@ function App() {
           <Route path='/checkout/payment-method/pix' element={<PayPIX />} />
         </Routes>
       </div>
+     </BooksContextProvider>
+
     </>
   )
 }

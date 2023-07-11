@@ -8,15 +8,19 @@ import PayBoleto from './PaymentMethods/boleto'
 import PayCredito from './PaymentMethods/credito'
 import PayPIX from './PaymentMethods/pix'
 
+import { BooksContextProvider } from './contexts/BooksContext'
+
 export {
     Home,
     NavbarDefault, 
     NavbarCheckout,
     Books,
     Authors,
+    BooksContextProvider,
     ViewBook, 
     Checkout,
     PayBoleto,
     PayCredito,
     PayPIX
+
 }
