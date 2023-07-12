@@ -11,6 +11,7 @@ function Manga({ id, capa, nome, preco }) {
                 <div className='mangas'> 
                     <img src={capa} alt="capa do Manga" width='250px' height='400' className='image' />
                 </div>
+                
                 <div className='descricao'>
                     <p>{nome}</p>
                     <p>{preco}</p>

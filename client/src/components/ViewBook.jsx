@@ -11,29 +11,38 @@ function ViewBook() {
   const [author, setAuthor] = useState()
   const { id } = useParams();
   const [banners, setBanners] = useState([])
-  const [number, setNumber] = useState(0)
-
+  const [number, setNumber] = useState(1)
+  const [total, setTotal] = useState()
+  let totalVariable = parseFloat(manga?.preco_unit)
   const banner = banners.find((banner) => banner.cod_banner === manga?.banner)
+  
 
   const plusNumber = () => {
     if (number < manga.quantidade) {
       setNumber(number + 1)
+      totalVariable = parseFloat(manga.preco_unit) * (number+1)
+      setTotal(totalVariable)
     }
 
   }
 
   const minusNumber = () => {
-    if (number > 0) {
+    if (number > 1) {
       setNumber(number - 1)
+      totalVariable = parseFloat(manga.preco_unit) * (number-1)
+      setTotal(totalVariable)
     }
   }
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setTotal(totalVariable)
+
         const mangaResponse = await api.get(`/api/v1/books/${id}`);
         const mangaData = mangaResponse.data.result[0];
         setManga(mangaData);
+        setTotal(parseFloat(mangaData?.preco_unit || 0));
 
         const idGenero = parseInt(mangaData.genero);
         const generoResponse = await api.get(`/api/v1/genres/${idGenero}`);
@@ -60,6 +69,7 @@ function ViewBook() {
     };
 
     fetchData();
+
   }, [id]);
 
 
@@ -79,7 +89,7 @@ function ViewBook() {
             <p>{author?.nome}</p>
             <hr />
             <p>Preço: {manga.preco_unit}</p>
-            <p>Total: R$<span>minha pika</span></p>
+            <p>Total: R$<span>{total}</span></p>
             <div className='buttonsArea'>
               <div className='quantityArea'>
                 <button onClick={minusNumber}><strong>-</strong></button>
