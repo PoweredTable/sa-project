@@ -118,6 +118,19 @@ exports.createBook = (req, res) => {
     )
 };
 
+exports.updateBookColumnById = (req, res) => {
+    const query = `UPDATE mangas SET quantidade = $2 where cod_manga = $1`;
+    const values = [ req.params.cod_manga, req.body.column_value, ];
+
+    database.query(query, values).then(
+    (result) => {
+        res.status(200).send({ result: result.rows })
+    },
+    (error) => {
+        res.status(404).send({ error: error })
+    }
+)
+}
 exports.updateBookById = (req, res) => {
     const query = `UPDATE mangas SET nome = $1, sinopse = $2, preco_unit = $3, quantidade = $4, paginas = $5, 
                    url_capa = $6, banner = $7, genero = $8, autor = $9 WHERE cod_manga = $10`;       
@@ -127,8 +140,10 @@ exports.updateBookById = (req, res) => {
     database.query(query, values).then(
         (result) => {
             res.status(200).send({ result: result.rows })
+            console.log('sucesso')
         },
         (error) => {
+            console.log('erro')
             res.status(404).send({ error: error })
         }
     )

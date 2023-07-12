@@ -23,7 +23,7 @@ class ServerAPI {
     }
 
     getAuthorById(id) {
-        return this.get(`/api/v1/authors/${id}`)
+        return this.get(`/api/v1/authors/${id}Q`)
     }
 
     getBookById(id) {
@@ -73,14 +73,14 @@ class ServerAPI {
         return this.post(`/api/v1/users/admin/auth`, {'login': login, 'password': password},
         { headers: { 'Content-Type': 'application/json' } })
     }
-
+    
+    updateBookColumnById(id,  column_value) {
+        return this.put(`/api/v1/books/update/set/${id}`, {'column_value': column_value},
+                { headers: { 'Content-Type': 'application/json' } } )
+    }
     updateBookById(id, book) {
         return this.put(`/api/v1/books/update/${id}`, book, { headers: { 'Content-Type': 'application/json' } })
     }
-
-    updateBookColumnById(id, column, column_value)
-        return this.put(`/api/v1/books/update/${id}/${column}`, {'column': column, 'column_value': column_value},
-                { headers: { 'Content-Type': 'application/json' } } )
 
     createAuthor(author) {
         return this.post('/api/v1/authors/create', author, { headers: { 'Content-Type': 'application/json' } })

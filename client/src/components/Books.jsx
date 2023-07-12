@@ -5,21 +5,19 @@ import Manga from './Manga'
 import api from '../services/api';
 import ViewBook from './ViewBook'
 
+import { BooksContext } from './contexts/BooksContext';
+import { useContext } from 'react';
+
+
 function Books() {
   const [generos, setGeneros] = useState([])
-  const [mangas, setMangas] = useState([])
-  let quantity = mangas.length 
+  const { books: mangas } = useContext(BooksContext);
+  let quantity = mangas.length
+  
   useEffect(() => {
-    api.get('/api/v1/books/all').then((response) => {
-      setMangas(response.data.result);
-    })
-    .catch((error) => {
-      console.log(error)
-    });
-
     api.get('/api/v1/genres/all').then((response)=>{
       setGeneros(response.data.result)
-      console.log(generos)
+
     })
     .catch((error)=>{
       console.log(error)

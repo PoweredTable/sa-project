@@ -13,8 +13,6 @@
     overflow: hidden;
 }
 
-
-
 .mangaMidle {
     padding-left: 100px;
     padding-right: 100px;
@@ -76,6 +74,13 @@
     gap: 50px;
 }
 
+.buttonsArea a{
+    text-decoration: none;
+    color: #C35E00;
+    font-family: Nobile;
+    align-items: center;
+}
+
 .quantityArea {
     display: flex;
     flex-direction: row;
@@ -85,10 +90,8 @@
     font-size: 15px;
     height: 35px;
     align-items: center;
-    
     gap: 10px;
     color: #C35E00;
-
 }
 
 .quantityArea button {
@@ -98,17 +101,18 @@
     font-size: 15px;
     width: 40px;
 }
+
 .mangaInformations{
     width: 320px;
 }
+
 .mangaInformations p{
     font-size: 16px;
-
 }
+
 .mangaInformations span{
     font-size: 15px;
 }
-
 
 hr{
     background-color: #d9d9d93f;

@@ -60,10 +60,18 @@
     color: #BEB8B8;
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 }
 .popover{
-    opacity: 76%;
+    opacity: 90%;
 }
 section p {
     margin: 0;
+  }
+
+
+
+  .checkout h1{
+    color: antiquewhite;
+    width: 70%;
   }
