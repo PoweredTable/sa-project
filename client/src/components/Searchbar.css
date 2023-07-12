@@ -82,6 +82,7 @@ height: 28px;
 .search-right button {
   border-radius: 16px;
   float: right !important;
+  cursor: pointer;
 }
 
 .svgLupa {
