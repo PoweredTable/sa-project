@@ -74,8 +74,8 @@ class ServerAPI {
         { headers: { 'Content-Type': 'application/json' } })
     }
     
-    updateBookColumnById(id, column, column_value) {
-        return this.put(`/api/v1/books/update/${id}/${column}`, {'column_value': column_value},
+    updateBookColumnById(id,  column_value) {
+        return this.put(`/api/v1/books/update/set/${id}`, {'column_value': column_value},
                 { headers: { 'Content-Type': 'application/json' } } )
     }
     updateBookById(id, book) {

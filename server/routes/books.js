@@ -59,7 +59,7 @@ router.post('/create', controller.createBook);
 //Where cod_manga = ${:cod_manga}
 // usages:
 // - atualiza as informações de um livro.
-router.put('/update/:cod_manga/:column', controller.updateBookColumnById)
+router.put('/update/:cod_manga', controller.updateBookColumnById)
 // router.put('/update/:cod_manga', controller.updateBookById);
 
 //DELETE FROM mangas WHERE cod_manga = ${:cod_manga}

@@ -8,13 +8,15 @@ import './all.css'
 function pix() {
     
     const [manga, setManga] = useState()
-    const { setInfo, info } = useContext(CheckoutContext)
+    const [mangaNew, setMangaNew] = useState([])
+    const {setInfo, info } = useContext(CheckoutContext)
     const [valor, setValor] = useState(0)
     const finalizarCompra = async () => {
         try {
             
-            await api.updateBookColumnById(info.id, "quantidade", valor)
+            await api.updateBookColumnById(info.id, valor)
             console.log("minha pika")
+
             
         }catch (error) {
         console.log(error);
@@ -31,14 +33,15 @@ function pix() {
                 console.log(error)
               });
 
-              
+            //   setMangaNew(...manga, manga.quantidade = valor)
+            //   console.log(mangaNew)
 
     }, []);
 
     useEffect(() => {
         const quantity = () => {
           if (manga) {
-            let valorCorreto = parseFloat(manga.quantidade) - info.quantidade;
+            let valorCorreto = parseFloat(manga?.quantidade) - info?.quantidade;
             setValor(valorCorreto)
             console.log(valorCorreto);
           }
@@ -58,10 +61,11 @@ function pix() {
                 </div>
             </div>
             <div className='finish'>
+              <Link to = '/'>
                 <button onClick={finalizarCompra}>
-                    {/* <Link to = '/'>Finalizar compra</Link> */}
-                    Finalizar compra
+                Finalizar compra
                 </button>
+                </Link>
             </div>
         </div>
 
