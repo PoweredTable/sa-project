@@ -1,0 +1,13 @@
+.carousel {
+    height: 100vh;
+}
+
+.carousel .slide img{
+    height: 100vh;
+    width: auto;
+}
+
+.carousel .slide {
+    background-color: black;
+    backdrop-filter: blur(5px);
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 
 import './App.css'
 
@@ -12,9 +12,10 @@ function App() {
       <div className='container'>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/books' element={<Books />} />
           <Route path='/books/:id' element={<ViewBook/>}/>
-          <Route path='/books' element={<Books/>} />
           <Route path='/authors' element={<Authors />} />
+          <Route path='/*' element={<Navigate to='/' />} />
         </Routes>
       </div>
     </>
