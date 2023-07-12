@@ -1,0 +1,218 @@
+ @font-face {
+    font-family: Nobile;
+    src: url("../assets/Nobile-Regular.ttf");
+}
+
+
+.buttonArea{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.buttonArea button{
+    background-color: green;
+    border: 14px solid green;
+    cursor: pointer;
+    width:100%
+}
+
+.title-area {
+    display: flex;
+    background-color: #777373;
+    color: #BEB8B8;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title-area input {
+    background-color: #777373;
+    color:  #BEB8B8;
+    outline: none;
+    border-radius: 0;
+    width: 100%
+}
+
+.title-area p {
+    background-color: #777373;
+    color:  #BEB8B8;
+    outline: none;
+    border-radius: 0;
+    width: 100%;
+    margin: 5px;
+    font-size:large;
+    text-align: center;
+}
+
+.title-area button {
+    background-color: #777373;
+    color:  #BEB8B8;
+
+}
+
+.product-form{
+    font-family: Nobile;
+}
+.products-form div{
+    background-color: #777373;
+    color:  #BEB8B8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    margin: 5%;
+
+}
+
+.product-form button {
+    background-color: #777373;
+    color:  #BEB8B8;
+    
+    
+}
+
+.product-image {
+    justify-content: center;
+    width: 240px;
+    height: 100%;
+    background-color: #777373;
+}
+
+.product-image img {
+    width: 240px;
+    height: 340px;
+}               
+
+.product-image input {
+    border: none;
+    width: 100%;
+    
+}
+
+
+.linha{
+    margin: 5% 0 ;
+    background-color: #777373;
+    font-size: 14px;
+    text-align: center;
+    padding: 2%;
+    color: white;
+    padding: 3%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+.linha label{
+    font-family: Nobile;
+    float: right;
+}
+.linha select{
+    width: 70%;
+    
+}
+.linha input{
+    width: 50%;
+    float: right
+}
+
+.linha p{
+    margin: 0;
+}
+
+.cima{
+    margin-top:0px
+}
+
+.baixo{
+    margin-bottom:0px
+}
+
+.correct{
+    margin: 0 5%;
+}
+
+
+.buttonsConfirm .buttonGreen{
+    background: green !important;
+    color: white !important;
+    border-radius: 0px !important;
+    float:left !important;
+    width: 80%;
+    padding: 2%;
+    margin-left:20px
+}
+
+.buttonsConfirm .buttonRed{
+    background: rgb(128, 0, 0) !important;
+    color: white !important;
+    border-radius: 0px !important;
+    float:right !important;
+    width: 80%;
+    padding: 2%;
+    margin-right: 20px;
+    
+}
+
+
+.buttonsConfirm{
+    display: flex;
+    grid-template-columns: repeat(2,50%);
+    width: 100%;
+    justify-content: space-between;
+    gap: 50px;  
+    
+
+}
+.product-synopsis {
+    padding-top: 8px;
+    margin-top: 5%;
+    font-family: Nobile;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-synopsis input{
+    width: 100%;
+    height: 50px;
+    
+}
+
+.carousel-admin {
+    display: flex;
+    justify-content: center;
+ 
+    margin: 0;
+    padding: 0;
+    max-height: 40vh;
+
+}
+
+.carousel-admin .slide img {
+    max-height: 100%;
+    width: auto;
+    max-height: 40vh;
+}
+
+.carousel-admin .slide div {
+    cursor: pointer;
+} 
+ 
+.book-name button {
+    margin: 10px;
+}
+
+.insert-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.input-area button {
+    max-width: 100%;
+}
+.input-area input {
+    max-width: 100%;
+}
+

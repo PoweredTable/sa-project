@@ -5,7 +5,6 @@ import './Admin.css'
 
 import Sidebar from './Sidebar'
 import AdminProducts from './AdminProducts'
-import AdminAuthors from './AdminAuthors'
 
 const Admin = () => {
 
@@ -15,7 +14,6 @@ const Admin = () => {
         <Sidebar></Sidebar>
         <Routes>
           <Route path='/products' element={<AdminProducts />} />
-          <Route path='/authors' element={<AdminAuthors />} />
           <Route path='/' element={<Navigate to="products" />} />
         </Routes>
       </div >
