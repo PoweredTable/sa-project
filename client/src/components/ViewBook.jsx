@@ -42,6 +42,7 @@ function ViewBook() {
 
   const buyManga = ()=>{
     let object = {
+      id:id,
       nome: manga?.nome,
       preco_unit: manga?.preco_unit,
       quantidade: number,
@@ -81,6 +82,7 @@ function ViewBook() {
         console.log(authorData);
         console.log(bannerData);
         console.log(info);
+        console.log(manga.code_manga)
       } catch (error) {
         console.log(error);
       }

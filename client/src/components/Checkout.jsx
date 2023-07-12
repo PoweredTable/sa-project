@@ -8,7 +8,6 @@ import { CheckoutContext } from './contexts/InfoCheckout';
 
 
 function Checkout() {
-    const [compra, setCompra] = useState([])
     const {info} = useContext(CheckoutContext)
     console.log(info)
     

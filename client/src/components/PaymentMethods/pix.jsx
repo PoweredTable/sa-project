@@ -1,9 +1,53 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Modal from 'react-modal';
 import { Routes, Route, Link } from "react-router-dom"
+import { CheckoutContext } from '../contexts/InfoCheckout';
+import api from '../../services/api';
 import './all.css'
 
 function pix() {
+    
+    const [manga, setManga] = useState()
+    const { setInfo, info } = useContext(CheckoutContext)
+    const [valor, setValor] = useState(0)
+    const finalizarCompra = async () => {
+        try {
+            
+            await api.updateBookColumnById(info.id, "quantidade", valor)
+            console.log("minha pika")
+            
+        }catch (error) {
+        console.log(error);
+    } 
+    } 
+
+    useEffect(() => {
+        
+            api.get(`/api/v1/books/${info.id}`).then(({data})=>{
+                setManga(data.result[0])
+                console.log(data.result[0])
+              })
+              .catch((error)=>{
+                console.log(error)
+              });
+
+              
+
+    }, []);
+
+    useEffect(() => {
+        const quantity = () => {
+          if (manga) {
+            let valorCorreto = parseFloat(manga.quantidade) - info.quantidade;
+            setValor(valorCorreto)
+            console.log(valorCorreto);
+          }
+        };
+      
+        if (manga) {
+          quantity();
+        }
+      }, [manga, info]);
 
 
     return (
@@ -14,7 +58,7 @@ function pix() {
                 </div>
             </div>
             <div className='finish'>
-                <button>
+                <button onClick={finalizarCompra}>
                     Finalizar compra
                 </button>
             </div>
