@@ -60,5 +60,7 @@ router.put('/update/:cod_manga', controller.updateBookById);
 // - apaga completamente um livro do banco de dados.
 router.delete('/delete/:cod_manga', controller.deleteBookById);
 
+router.put('/update/:cod_manga/:column', controller.updateBookColumnById)
+
 
 module.exports = router

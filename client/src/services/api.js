@@ -78,6 +78,10 @@ class ServerAPI {
         return this.put(`/api/v1/books/update/${id}`, book, { headers: { 'Content-Type': 'application/json' } })
     }
 
+    updateBookColumnById(id, column, column_value)
+        return this.put(`/api/v1/books/update/${id}/${column}`, {'column': column, 'column_value': column_value},
+                { headers: { 'Content-Type': 'application/json' } } )
+
     createAuthor(author) {
         return this.post('/api/v1/authors/create', author, { headers: { 'Content-Type': 'application/json' } })
     }

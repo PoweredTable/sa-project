@@ -148,3 +148,16 @@ exports.deleteBookById = (req, res) => {
     )
 };
 
+exports.updateBookColumnById = (req, res) => {
+    const query = `UPDATE mangas SET $1 = $2 where cod_manga = $3`;
+    const values = [req.params.column, req.body.column_value, req.params.cod_manga];
+
+    database.query(query, values).then(
+    (result) => {
+        res.status(200).send({ result: result.rows })
+    },
+    (error) => {
+        res.status(404).send({ error: error })
+    }
+)
+}
