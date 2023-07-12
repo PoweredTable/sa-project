@@ -59,6 +59,7 @@ function pix() {
             </div>
             <div className='finish'>
                 <button onClick={finalizarCompra}>
+                    {/* <Link to = '/'>Finalizar compra</Link> */}
                     Finalizar compra
                 </button>
             </div>
