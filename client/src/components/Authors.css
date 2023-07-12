@@ -1,17 +1,8 @@
-
 @font-face {
     font-family: Nobile;
     src: url("./assets/Nobile-Regular.ttf");
 }
 
-body {
-    background-image: url(./assets/backgound-screen5.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow-x: hidden;
-    font-family: Nobile;
-}
 
 .container-authors {
     border: 3px solid #4E4E4E;
@@ -19,6 +10,8 @@ body {
     margin: 10px;
     text-align: center;
     margin-top:10%;
+    display: flex;
+    justify-content: space-around;
 
 }
 
@@ -39,8 +32,8 @@ body {
     grid-template-columns: repeat(4, 1fr);
     border-radius: 2px;
     margin-top: 50px;
-    justify-content: space-around;
     margin: 0 10%;
+    justify-content: space-between;
 }
 
 .container-card img {

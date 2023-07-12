@@ -23,7 +23,7 @@ class ServerAPI {
     }
 
     getAuthorById(id) {
-        return this.get(`/api/v1/authors/${id}`)
+        return this.get(`/api/v1/authors/${id}Q`)
     }
 
     getBookById(id) {
@@ -87,8 +87,5 @@ class ServerAPI {
     }
 }
 
-
 const api = new ServerAPI();
-
-
 export default api;

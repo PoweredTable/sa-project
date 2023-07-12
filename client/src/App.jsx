@@ -1,6 +1,5 @@
 import React from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom';
-
+import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 
 import './App.css'
 import {
@@ -37,6 +36,8 @@ function App() {
               <Route path='/books' element={<Books />} />
               <Route path='/authors' element={<Authors />} />
               <Route path='/checkout' element={<Checkout />} />
+                <Route path='/admin/*' element={<Admin />} />
+                <Route path='/*' element={<Navigate to='/' />} />
               <Route path='/checkout/payment-method/boleto' element={<PayBoleto />} />
               <Route path='/checkout/payment-method/credito' element={<PayCredito />} />
               <Route path='/checkout/payment-method/pix' element={<PayPIX />} />
@@ -44,7 +45,6 @@ function App() {
           </div>
         </CheckoutContextProvider>
       </BooksContextProvider>
-
     </>
   )
 }
