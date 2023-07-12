@@ -16,6 +16,10 @@
     box-sizing: border-box;
     gap: 2rem;
     padding: 0 1rem;
+    /* position: fixed;
+    z-index: 10;
+    width: 100vw;
+    top: 0; */
 }
 
 .navBarUP{

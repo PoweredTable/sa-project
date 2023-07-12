@@ -7,17 +7,11 @@ const controller = require('../controllers/books');
 // - lista todos os livros ao clicar em Livros na subnavbar e ao entrar na tela de gerenciamento de produtos.
 router.get('/all', controller.getAllBooks);
 
-
 // select * from MANGAS where cod_manga = ${:cod_manga};
 // usages:
 // - apresenta o livro selecionado.
 router.get('/:cod_manga', controller.getBookById);
 
-
-// select * from MANGAS where cod_manga = ${:cod_manga};
-// usages:
-// - apresenta o livro selecionado.
-router.get('/:cod_manga', controller.getBookById);
 // select * from MANGAS where Nome like lower(${:nome});
 // usages:
 // - na searchbar, lista os livros que contenham caracteres do parâmetro `:nome` na coluna `nome` de MANGAS. 
@@ -65,6 +59,8 @@ router.put('/update/:cod_manga', controller.updateBookById);
 // usages:
 // - apaga completamente um livro do banco de dados.
 router.delete('/delete/:cod_manga', controller.deleteBookById);
+
+router.put('/update/:cod_manga/:column', controller.updateBookColumnById)
 
 
 module.exports = router

@@ -12,4 +12,6 @@ router.get('/all', controller.getAllBanners);
 // - cria um novo banner no banco de dados.
 router.post('/create', controller.createBanner);
 
+router.delete('/delete/:cod_banner', controller.deleteBannerById)
+
 module.exports = router

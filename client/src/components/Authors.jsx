@@ -8,7 +8,7 @@ import CardAuthor from './CardAuthor.jsx'
 
 function Authors() {
   const [authors, setAuthors] = useState([]);
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(0);
   const [indiceSelecionado, setIndiceSelecionado] = useState(0);
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -37,6 +37,7 @@ function Authors() {
 
 
     <div className='container-authors'> 
+
       <h2>Autores encontrados: <span>{authors.length}</span></h2>
       <br />
       <div className='container-autor'>

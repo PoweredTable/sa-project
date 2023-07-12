@@ -1,0 +1,23 @@
+.search-bar-admin {
+   display: flex;
+   background-color: inherit;
+   background: #dad2d2;
+   border: 2px #a59d95 solid;
+   width: 80%;
+}
+
+.search-bar-admin input {
+   width: 90%;
+   height: 100%;
+   float: left;
+   padding-left: 10px;
+   max-height: 100%;
+   border: 10px solid rgb(255, 255, 255);
+   outline: 0;
+   font-size: 18px;
+   color: #a59d95;
+}
+
+.search-bar-admin button {
+   display: grid;
+}

@@ -122,7 +122,7 @@ exports.updateBookById = (req, res) => {
     const query = `UPDATE mangas SET nome = $1, sinopse = $2, preco_unit = $3, quantidade = $4, paginas = $5, 
                    url_capa = $6, banner = $7, genero = $8, autor = $9 WHERE cod_manga = $10`;       
     const values = [req.body.nome, req.body.sinopse, req.body.preco_unit, req.body.quantidade,
-                    req.body.paginas, req.body.url_capa, req.body.banner, req.body.genero, req.body.autor, req.body.cod_manga];
+                    req.body.paginas, req.body.url_capa, req.body.banner, req.body.genero, req.body.autor, req.params.cod_manga];
 
     database.query(query, values).then(
         (result) => {
@@ -136,7 +136,7 @@ exports.updateBookById = (req, res) => {
 
 exports.deleteBookById = (req, res) => {
     const query =`DELETE FROM mangas WHERE cod_manga = $1`;
-    const values =[req.body.cod_manga];
+    const values = [req.params.cod_manga];
 
     database.query(query,values).then(
         (result) => {
@@ -148,3 +148,16 @@ exports.deleteBookById = (req, res) => {
     )
 };
 
+exports.updateBookColumnById = (req, res) => {
+    const query = `UPDATE mangas SET $1 = $2 where cod_manga = $3`;
+    const values = [req.params.column, req.body.column_value, req.params.cod_manga];
+
+    database.query(query, values).then(
+    (result) => {
+        res.status(200).send({ result: result.rows })
+    },
+    (error) => {
+        res.status(404).send({ error: error })
+    }
+)
+}
