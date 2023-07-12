@@ -10,7 +10,6 @@ class ServerAPI {
         this.put = this.instance.put;
         this.delete = this.instance.delete;
     }
-
     getAllBooks() {
         return this.get('/api/v1/books/all');
     }

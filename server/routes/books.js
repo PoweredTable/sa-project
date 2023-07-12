@@ -2,16 +2,22 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/books');
 
-// select * from MANGAS where cod_manga = ${:cod_manga};
-// usages:
-// - apresenta o livro selecionado.
-router.get('/:cod_manga', controller.getBookById);
-
 // select * from MANGAS;
 // usages:
 // - lista todos os livros ao clicar em Livros na subnavbar e ao entrar na tela de gerenciamento de produtos.
 router.get('/all', controller.getAllBooks);
 
+
+// select * from MANGAS where cod_manga = ${:cod_manga};
+// usages:
+// - apresenta o livro selecionado.
+router.get('/:cod_manga', controller.getBookById);
+
+
+// select * from MANGAS where cod_manga = ${:cod_manga};
+// usages:
+// - apresenta o livro selecionado.
+router.get('/:cod_manga', controller.getBookById);
 // select * from MANGAS where Nome like lower(${:nome});
 // usages:
 // - na searchbar, lista os livros que contenham caracteres do parâmetro `:nome` na coluna `nome` de MANGAS. 

@@ -6,5 +6,6 @@ const controller = require('../controllers/genres');
 // usages:
 // - listar os gêneros na subnavbar (modal) e na sidebar.
 router.get('/all', controller.getAllGenres);
+router.get('/:cod_genero', controller.getGenrebyId);
 
 module.exports = router
