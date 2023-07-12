@@ -2,13 +2,10 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/authors');
 
-
 // select * from AUTORES
 // usages:
 // - listar os autores na página de autores.
 router.get('/all', controller.getAllAuthors);
-
-
 // select * from AUTORES where cod_autor = {:cod_autor};
 // usages:
 // - apresenta o autor selecionado em um modal.

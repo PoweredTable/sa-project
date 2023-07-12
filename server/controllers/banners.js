@@ -28,3 +28,17 @@ exports.createBanner = (req, res) => {
     )
     
 };
+
+exports.deleteBannerById = (req, res) => {
+    const query =`DELETE FROM banners WHERE cod_banner = $1`;
+    const values = [req.params.cod_banner];
+
+    database.query(query, values).then(
+        (result)=>{
+            res.status(200).send({result: result.rows})
+        },
+        (error)=>{
+            res.status(404).send({error: error})
+        }
+    )
+};
