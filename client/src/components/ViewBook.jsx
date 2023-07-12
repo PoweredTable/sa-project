@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import './ViewBook.css'
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import api from '../services/api';
+import { useContext } from 'react';
+import { CheckoutContext } from './contexts/InfoCheckout';
+
 
 
 function ViewBook() {
@@ -15,6 +19,8 @@ function ViewBook() {
   const [total, setTotal] = useState()
   let totalVariable = parseFloat(manga?.preco_unit)
   const banner = banners.find((banner) => banner.cod_banner === manga?.banner)
+  const {setInfo, info} = useContext(CheckoutContext)
+ 
   
 
   const plusNumber = () => {
@@ -32,6 +38,17 @@ function ViewBook() {
       totalVariable = parseFloat(manga.preco_unit) * (number-1)
       setTotal(totalVariable)
     }
+  }
+
+  const buyManga = ()=>{
+    let object = {
+      nome: manga?.nome,
+      preco_unit: manga?.preco_unit,
+      quantidade: number,
+      preco_total: total
+    }
+    setInfo(object) 
+    console.log(info)
   }
 
   useEffect(() => {
@@ -61,8 +78,9 @@ function ViewBook() {
 
         console.log(mangaData);
         console.log(generoData);
-        console.log(authorData)
-        console.log(bannerData)
+        console.log(authorData);
+        console.log(bannerData);
+        console.log(info);
       } catch (error) {
         console.log(error);
       }
@@ -96,7 +114,7 @@ function ViewBook() {
                 <p id='number'><strong>{number}</strong></p>
                 <button><strong onClick={plusNumber}>+</strong></button>
               </div>
-              <button id='buyButton'><strong>Comprar</strong></button>
+              <button id='buyButton' onClick={buyManga}><strong><Link to='/checkout'>Comprar</Link></strong></button>
             </div>
             <hr />
             <div className='mangaInformations'>
